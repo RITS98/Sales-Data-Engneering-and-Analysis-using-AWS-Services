@@ -291,3 +291,47 @@ The **Glue Data Catalog** is:
 | Services That Use It | Glue ETL jobs, Athena, Redshift | Glue, Athena, Redshift Spectrum, EMR |
 
 
+1. Create a Database
+<img width="1686" height="504" alt="image" src="https://github.com/user-attachments/assets/996f8280-0032-4ae7-b8b7-60dfc4467e0b" />
+2. Create a Glue Crawler
+<img width="1699" height="601" alt="image" src="https://github.com/user-attachments/assets/0941fd1e-828c-4a1d-b6a1-0dd9434daf7c" />
+   - Add a classifier to extarct the fields from JSON file
+     <img width="1692" height="651" alt="image" src="https://github.com/user-attachments/assets/f612899a-5f1a-48af-a66f-2a61cde9e530" />
+3. Add the necessaru details for crawler creation
+<img width="1643" height="932" alt="image" src="https://github.com/user-attachments/assets/f202e51f-63d2-46c3-ad7e-b511f8b55e0d" />
+
+
+## Results
+
+1. Insert Mock Data
+   <img width="1317" height="974" alt="image" src="https://github.com/user-attachments/assets/e00a34cf-1bac-411c-b054-07c19ac1cb78" />
+
+2. Check S3 For data avalability after transformation using Lambda
+   <img width="1678" height="756" alt="image" src="https://github.com/user-attachments/assets/dbb83a9c-36dd-4b4f-bdde-90736b9681cf" />
+3. Download the data to local to check the correct transformation
+   <img width="1195" height="210" alt="image" src="https://github.com/user-attachments/assets/933c4676-da4f-4cc5-9f5c-3ffe99914998" />
+4. Check Glue Crawler
+
+   <img width="1369" height="621" alt="image" src="https://github.com/user-attachments/assets/4586cf63-aa9a-4e15-8210-8e637c9a5d7b" />
+   The table is created and populated.
+   <img width="1412" height="772" alt="image" src="https://github.com/user-attachments/assets/64b66a27-6c06-49f9-a4e3-8b5325329ca3" />
+   The partitions are the subfolders in S3
+   <img width="1301" height="695" alt="image" src="https://github.com/user-attachments/assets/78ca0b8b-b6fb-4fdf-a4d7-a9dc691712f2" />
+
+5. Lets Query the Table using Athena
+   Athena asks a S3 location to store the results it runs. So assign a folder in S3 bucket.
+   <img width="1110" height="330" alt="image" src="https://github.com/user-attachments/assets/cf6a7218-40ed-4b98-858c-4eaa6aae0b1d" />
+   <img width="1409" height="424" alt="image" src="https://github.com/user-attachments/assets/b7c458c8-ef96-422e-9caa-27834d2104b5" />
+
+   - Now query the files.
+     <img width="1609" height="1117" alt="image" src="https://github.com/user-attachments/assets/1282b1cc-390a-461d-bb81-b0724868f7c2" />
+   - Give total sales order by product
+     <img width="1575" height="970" alt="image" src="https://github.com/user-attachments/assets/3eee8a74-6246-4a3c-b3f5-cb47d476633c" />
+   - The number of Unique Products and their names
+     <img width="1315" height="783" alt="image" src="https://github.com/user-attachments/assets/2e83772f-dbb3-4752-96e9-b89f2afcc4bd" />
+
+
+
+
+
+
