@@ -227,6 +227,7 @@ Serverless: No need to manage clusters, scaling, or batching.
 3. If there is an issue in the permissions. Check the role and the following below.
 <img width="1287" height="771" alt="image" src="https://github.com/user-attachments/assets/2b3ddebf-c95a-4f1a-bf9b-f17a6f6348da" />
 
+After a performing a test,
 As you can see below, the transformed data is generated in S3
 <img width="1045" height="733" alt="image" src="https://github.com/user-attachments/assets/1fb58fe5-ac7f-4164-aa7c-a0af827f81c8" />
 
@@ -234,4 +235,59 @@ As you can see below, the transformed data is generated in S3
 {"orderid": "2044", "product_name": "Tablet", "quantity": 4, "price": 200.44, "event_type": "INSERT", "creation_time": 1752161982}
 {"orderid": "4997", "product_name": "Laptop", "quantity": 4, "price": 311.9, "event_type": "INSERT", "creation_time": 1752161990}
 ```
+
+### Create a Glue Crawler
+
+What is **AWS Glue Crawler**?
+
+A **Glue Crawler**:
+
+* Connects to a **data source** (e.g., S3, JDBC, DynamoDB)
+* **Reads the structure** of the data (CSV, JSON, Parquet, etc.)
+* Infers:
+
+  * Column names
+  * Data types
+  * Partitions
+* Automatically **creates or updates** tables in the **Glue Data Catalog**
+
+**Example**:
+You have JSON files in `s3://my-bucket/sales/`. A crawler can scan the data and create a table `sales_data` with columns like `customer_id`, `order_id`, `amount`.
+
+What is **AWS Glue Data Catalog**?
+
+The **Glue Data Catalog** is:
+
+* A **centralized metadata repository** for all your datasets
+* Stores:
+
+  * Databases (logical grouping of tables)
+  * Tables (schema: column names, types, location in S3)
+  * Job definitions and partitions
+
+**Used by:**
+
+* **AWS Glue Jobs** to process data
+* **Athena** to query S3 files using SQL
+* **Redshift Spectrum** to read external S3 data
+* **EMR, Presto, Hive** for table lookups
+
+**Think of it like a "Hive Metastore" for all AWS analytics services**.
+
+**How They Work Together?**
+
+1. You run a **Glue Crawler**
+2. It scans data in your source (e.g., S3)
+3. It creates a **table** in the **Data Catalog**
+4. You query or process the data using Glue, Athena, Redshift, etc.
+
+**Summary Table**
+
+| Feature              | Glue Crawler                    | Glue Data Catalog                    |
+| -------------------- | ------------------------------- | ------------------------------------ |
+| Role                 | Scans & infers schema           | Stores metadata (schemas, tables)    |
+| Output               | Tables in Data Catalog          | Metadata used by analytics services  |
+| Used For             | Automated schema detection      | Querying and managing datasets       |
+| Services That Use It | Glue ETL jobs, Athena, Redshift | Glue, Athena, Redshift Spectrum, EMR |
+
 
