@@ -346,6 +346,9 @@ The **Glue Data Catalog** is:
      <img width="1315" height="783" alt="image" src="https://github.com/user-attachments/assets/2e83772f-dbb3-4752-96e9-b89f2afcc4bd" />
 
 
+6. When a change is made on a record in Dynamo DB. The cahgned record is only propagated via Kinesis streaming and stored in S3
+   which can again be queried after crawling using AWS Glue and Athena.
+   <img width="1118" height="420" alt="image" src="https://github.com/user-attachments/assets/7d293a65-8542-49ad-a970-b8c3768072f3" />
 
 
 
