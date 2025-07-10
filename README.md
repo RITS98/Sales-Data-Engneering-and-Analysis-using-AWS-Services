@@ -69,3 +69,32 @@ AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
 Default region name [None]: us-east-1
 Default output format [None]: json
 ```
+
+### Create Dynamo DB tables
+1. Create a Dynamo DB table where the mock sales data will be stored.
+<img width="1701" height="571" alt="image" src="https://github.com/user-attachments/assets/a0df8038-fbef-484c-a639-255676e90ad0" />
+
+2. Fill the details and click on `Create`
+<img width="1636" height="1525" alt="image" src="https://github.com/user-attachments/assets/09e96809-a524-420f-aa51-17c43f99c612" />
+
+3. The table details are as given below.
+<img width="1636" height="1525" alt="image" src="https://github.com/user-attachments/assets/27b717b9-25a3-42c6-80e2-0d9df51041d3" />
+
+4. Enable Dynamo DB Stream API
+<img width="1374" height="971" alt="image" src="https://github.com/user-attachments/assets/b18d15a8-453a-4cc4-b032-2332d04df984" />
+
+<img width="1675" height="521" alt="image" src="https://github.com/user-attachments/assets/3c852ce9-8090-458b-b395-669418aeb8a7" />
+Basically, if I take the example of RDS, I wll get the entire row which is changed. Other options include getting only the changed attribute
+which is similar to getting only the column name and value that is changed. Other options are intuive.
+
+### Create Amazon Kinesis Instance
+1. Create a data stream
+   <img width="1660" height="1155" alt="image" src="https://github.com/user-attachments/assets/30d5b86a-0cc5-4c40-9724-8046c00d2ff7" />
+
+2. View The Kinesis Instance details below
+   <img width="1283" height="256" alt="image" src="https://github.com/user-attachments/assets/94c94cbe-8065-48ea-9ba1-9fbce084544c" />
+
+
+### Create Event Bridge Pipe to listen to Dynamo DB Stream API for CDC and sent it to Kinesis
+1. 
+
