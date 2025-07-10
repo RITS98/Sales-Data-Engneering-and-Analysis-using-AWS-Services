@@ -226,3 +226,12 @@ Serverless: No need to manage clusters, scaling, or batching.
 
 3. If there is an issue in the permissions. Check the role and the following below.
 <img width="1287" height="771" alt="image" src="https://github.com/user-attachments/assets/2b3ddebf-c95a-4f1a-bf9b-f17a6f6348da" />
+
+As you can see below, the transformed data is generated in S3
+<img width="1045" height="733" alt="image" src="https://github.com/user-attachments/assets/1fb58fe5-ac7f-4164-aa7c-a0af827f81c8" />
+
+```
+{"orderid": "2044", "product_name": "Tablet", "quantity": 4, "price": 200.44, "event_type": "INSERT", "creation_time": 1752161982}
+{"orderid": "4997", "product_name": "Laptop", "quantity": 4, "price": 311.9, "event_type": "INSERT", "creation_time": 1752161990}
+```
+
