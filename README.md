@@ -300,6 +300,21 @@ The **Glue Data Catalog** is:
 3. Add the necessaru details for crawler creation
 <img width="1643" height="932" alt="image" src="https://github.com/user-attachments/assets/f202e51f-63d2-46c3-ad7e-b511f8b55e0d" />
 
+### Open AWS Athena to query the Glue Catelog
+- Amazon Athena is a serverless, interactive query service that lets you analyze data stored in Amazon S3 using standard SQL.
+- No servers, no ETL pipelines — just point to your S3 data, define a schema, and start querying with SQL.
+
+- You store your raw or processed data in S3 — files can be CSV, JSON, Parquet, ORC, Avro, etc.
+- You define a schema for that data:
+- Manually via SQL DDL (CREATE EXTERNAL TABLE)
+- Or Automatically using AWS Glue Crawlers
+- You run SQL queries on it using Athena's query editor or API.
+- Athena scans the S3 data in-place (no data movement) and returns the results.
+
+
+
+<img width="968" height="682" alt="image" src="https://github.com/user-attachments/assets/38a92a01-495f-4255-9300-49748ddf5010" />
+
 
 ## Results
 
