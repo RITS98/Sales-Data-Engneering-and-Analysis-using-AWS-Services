@@ -136,6 +136,7 @@ Kinesis Data Firehose is a fully managed data delivery service used to capture, 
 
 Serverless: No need to manage clusters, scaling, or batching.
 
+```
   [ Amazon Kinesis ]
          ↓
   ┌─────────────────────┐
@@ -146,4 +147,4 @@ Serverless: No need to manage clusters, scaling, or batching.
          ↓
      [ Destination ]
         └── S3 / Redshift / OpenSearch / Splunk
-
+```
