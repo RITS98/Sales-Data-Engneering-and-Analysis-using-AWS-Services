@@ -135,6 +135,42 @@ How It Works
 6. The pipe is successfully created.
    <img width="1368" height="257" alt="image" src="https://github.com/user-attachments/assets/5f0b3838-9424-4f50-9c05-397d14f257b2" />
 
+In the Kinesis, the data will look like this as shown below
+```
+{
+    "eventID": "c199a649301a602afc9f5e6332f3d9f7",
+    "eventName": "INSERT",
+    "eventVersion": "1.1",
+    "eventSource": "aws:dynamodb",
+    "awsRegion": "us-east-1",
+    "dynamodb": {
+        "ApproximateCreationDateTime": 1752158591,
+        "Keys": {
+            "orderId": {
+                "S": "921"
+            }
+        },
+        "NewImage": {
+            "quantity": {
+                "N": "1"
+            },
+            "orderId": {
+                "S": "921"
+            },
+            "price": {
+                "N": "146.37"
+            },
+            "product_name": {
+                "S": "Laptop"
+            }
+        },
+        "SequenceNumber": "149600003405850623541670",
+        "SizeBytes": 57,
+        "StreamViewType": "NEW_IMAGE"
+    },
+    "eventSourceARN": "arn:aws:dynamodb:us-east-1:692018623807:table/GadgetOrders_Ritayan/stream/2025-07-10T14:05:24.903"
+}
+```
 
 ### Create a S3 bucket
 1. Create a S3 bucket by giving it a unique name and create it with default settings.
@@ -142,6 +178,9 @@ How It Works
 
 2. Click on `Create bucket`
 <img width="743" height="306" alt="image" src="https://github.com/user-attachments/assets/087be08d-5c9b-4f21-a96e-f518a554f573" />
+
+### Create a Lambda Function to apply transformation on the streaming data
+1. Create a Lambda Function
 
 ### Create Kinesis Firehose
 
@@ -162,7 +201,7 @@ Serverless: No need to manage clusters, scaling, or batching.
   │   Kinesis Firehose  │
   └─────────────────────┘
          ↓       ↓       ↓
-   [ Transform ] [ Buffer ] [ Compress/Encrypt ]
+   [ Transform ] [ Buffer ] [ Compress/Encrypt ] (Using AWS Lambda)
          ↓
      [ Destination ]
         └── S3 / Redshift / OpenSearch / Splunk
