@@ -27,5 +27,7 @@ The architecture consists of several AWS services working together to handle dat
 7. **Data Cataloging**: AWS Glue Data Catalog stores metadata about the data in S3.
 8. **Data Querying**: AWS Athena is used to query the data stored in S3.
 
+<img width="834" height="720" alt="Sales Data" src="https://github.com/user-attachments/assets/0ac9a4f1-7c74-4335-b29b-882badb23be7" />
+
 
 ## 
