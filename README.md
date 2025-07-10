@@ -96,5 +96,35 @@ which is similar to getting only the column name and value that is changed. Othe
 
 
 ### Create Event Bridge Pipe to listen to Dynamo DB Stream API for CDC and sent it to Kinesis
-1. 
+1. Create a Event Bride Pipe
+   <img width="1670" height="789" alt="image" src="https://github.com/user-attachments/assets/9b5bbb84-9489-48d7-9c15-f0f2418aca7b" />
+
+2. Select the source
+   <img width="1669" height="783" alt="image" src="https://github.com/user-attachments/assets/c06e27b6-60ad-4f9c-9e31-68a4e66b95dc" />
+   <img width="826" height="392" alt="image" src="https://github.com/user-attachments/assets/aac9bcd7-96d3-429e-b1c0-74b0bdc4c0c6" />
+
+3. Select the target
+   Remove the intermediate steps like `Filtering` and `Enrichment` by clicking on the `Remove` button.
+   <img width="1677" height="701" alt="image" src="https://github.com/user-attachments/assets/0ba91fb8-574e-480d-ab80-85544483367b" />
+4. Click on `Create Pipe`
+   <img width="1151" height="748" alt="image" src="https://github.com/user-attachments/assets/61f5643a-2430-4e9d-a79f-682f0a3387f8" />
+
+5. Give Write Access to Event Bridge Pipe
+<img width="959" height="528" alt="image" src="https://github.com/user-attachments/assets/b9fe3a94-070f-4bbd-8641-b3ad9b76a63a" />
+<img width="1078" height="685" alt="image" src="https://github.com/user-attachments/assets/d6fc0416-70d2-42c3-a349-ebbf627c1a64" />
+
+6. The pipe is successfully created.
+   <img width="1368" height="257" alt="image" src="https://github.com/user-attachments/assets/5f0b3838-9424-4f50-9c05-397d14f257b2" />
+
+
+### Create a S3 bucket
+1. Create a S3 bucket by giving it a unique name and create it with default settings.
+<img width="3312" height="4301" alt="image" src="https://github.com/user-attachments/assets/a6c77805-3601-4631-aacf-7a81128d0914" />
+
+2. Click on `Create bucket`
+<img width="743" height="306" alt="image" src="https://github.com/user-attachments/assets/087be08d-5c9b-4f21-a96e-f518a554f573" />
+
+3. See teh bucket below
+<img width="743" height="306" alt="image" src="https://github.com/user-attachments/assets/2993e3dd-2208-4346-a082-9d246497beca" />
+
 
