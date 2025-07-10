@@ -1,5 +1,5 @@
-# Sales Data Analysis and Projection
-This project focuses on analyzing sales data and projecting future sales trends using Python and various data analysis libraries. The goal is to provide insights into sales performance and forecast future sales based on historical data.
+# Sales Data Analysis
+This project focuses on analyzing sales data and trends using Python and various data analysis libraries. The goal is to provide insights into sales performance and forecast future sales based on historical data.
 
 ## Technologies Used
 - Python
