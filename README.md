@@ -96,6 +96,25 @@ which is similar to getting only the column name and value that is changed. Othe
 
 
 ### Create Event Bridge Pipe to listen to Dynamo DB Stream API for CDC and sent it to Kinesis
+
+EventBridge Pipes is a fully managed service that makes it easy to connect event sources to targets with optional filtering, transformation, and enrichment.
+Think of it as a low-code ETL pipeline for event-driven data — like "glue" between your services without needing custom Lambda functions or Step Functions.
+
+How It Works
+```
+[Source] → [Filter] → [Enrichment (optional)] → [Transform (optional)] → [Target]
+```
+- Source: Where the event comes from (e.g., SQS)
+- Filter: Only forward specific events
+- Enrichment (Transform): Add more data via Lambda or Step Functions or transform the data
+- Target: Final destination (e.g., another queue, Lambda, etc.)
+
+**Why Use It?**
+- No need to write Lambda code just to move or filter events
+- Automatically scales and retries failed events
+- Saves time in building event-driven apps
+
+
 1. Create a Event Bride Pipe
    <img width="1670" height="789" alt="image" src="https://github.com/user-attachments/assets/9b5bbb84-9489-48d7-9c15-f0f2418aca7b" />
 
