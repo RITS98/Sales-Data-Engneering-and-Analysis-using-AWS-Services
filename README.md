@@ -124,7 +124,26 @@ which is similar to getting only the column name and value that is changed. Othe
 2. Click on `Create bucket`
 <img width="743" height="306" alt="image" src="https://github.com/user-attachments/assets/087be08d-5c9b-4f21-a96e-f518a554f573" />
 
-3. See teh bucket below
-<img width="743" height="306" alt="image" src="https://github.com/user-attachments/assets/2993e3dd-2208-4346-a082-9d246497beca" />
+### Create Kinesis Firehose
 
+Kinesis Data Firehose is a fully managed data delivery service used to capture, transform, and load streaming data into storage and analytics services in near real-time, such as:
+
+- Amazon S3
+- Amazon Redshift
+- Amazon OpenSearch Service
+- Amazon Data Firehose for Splunk, Datadog, New Relic, etc.
+- Generic HTTP endpoints
+
+Serverless: No need to manage clusters, scaling, or batching.
+
+  [ Amazon Kinesis ]
+         ↓
+  ┌─────────────────────┐
+  │   Kinesis Firehose  │
+  └─────────────────────┘
+         ↓       ↓       ↓
+   [ Transform ] [ Buffer ] [ Compress/Encrypt ]
+         ↓
+     [ Destination ]
+        └── S3 / Redshift / OpenSearch / Splunk
 
