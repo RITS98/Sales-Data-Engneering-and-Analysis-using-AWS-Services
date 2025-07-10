@@ -190,6 +190,10 @@ In the Kinesis, the data will look like this as shown below
 3. Click on `Deploy` after adding the code to code source.
 <img width="1132" height="629" alt="image" src="https://github.com/user-attachments/assets/ff8648be-d688-467b-bc6d-af6a4e93c1d7" />
 
+4. Increase Timeout and add required Firehose permissions
+<img width="1380" height="675" alt="image" src="https://github.com/user-attachments/assets/dbf13233-e246-4f38-9dd3-35b669a8da52" />
+<img width="1101" height="686" alt="image" src="https://github.com/user-attachments/assets/1fdf8161-b816-497c-be4d-5fcf364915a9" />
+
 
 ### Create Kinesis Firehose
 
@@ -215,3 +219,10 @@ Serverless: No need to manage clusters, scaling, or batching.
      [ Destination ]
         └── S3 / Redshift / OpenSearch / Splunk
 ```
+
+1. Create a Firehose Instance.
+2. Add the necessary details while creation.
+<img width="3328" height="7171" alt="image" src="https://github.com/user-attachments/assets/3e8f020f-dfad-491c-ae6f-24f217cf9988" />
+
+3. If there is an issue in the permissions. Check the role and the following below.
+<img width="1287" height="771" alt="image" src="https://github.com/user-attachments/assets/2b3ddebf-c95a-4f1a-bf9b-f17a6f6348da" />
