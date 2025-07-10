@@ -136,6 +136,8 @@ How It Works
    <img width="1368" height="257" alt="image" src="https://github.com/user-attachments/assets/5f0b3838-9424-4f50-9c05-397d14f257b2" />
 
 In the Kinesis, the data will look like this as shown below
+<img width="1348" height="692" alt="image" src="https://github.com/user-attachments/assets/34047788-e89d-4bee-bb11-80c66015e06e" />
+
 ```
 {
     "eventID": "c199a649301a602afc9f5e6332f3d9f7",
@@ -181,6 +183,13 @@ In the Kinesis, the data will look like this as shown below
 
 ### Create a Lambda Function to apply transformation on the streaming data
 1. Create a Lambda Function
+<img width="1379" height="450" alt="image" src="https://github.com/user-attachments/assets/9c439767-2b21-4443-a61f-624fe8e84141" />
+<img width="1139" height="361" alt="image" src="https://github.com/user-attachments/assets/85c9c43b-0fc5-4bb0-b249-533a7548622e" />
+
+2. Apply the Transformation code `kinesis_data_transformer_using_lambda.py`
+3. Click on `Deploy` after adding the code to code source.
+<img width="1132" height="629" alt="image" src="https://github.com/user-attachments/assets/ff8648be-d688-467b-bc6d-af6a4e93c1d7" />
+
 
 ### Create Kinesis Firehose
 
